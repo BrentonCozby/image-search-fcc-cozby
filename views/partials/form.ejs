@@ -1,19 +1,19 @@
 <div class="row">
     <form class="form col s12">
         <div class="row">
+            <h6 class="form-option-title col s12">Search Term&nbsp;&nbsp;|&nbsp;&nbsp;search</h6>
             <div class="form-search input-field col s6">
-                <input name="search" id="search" type="text" class="validate" required>
-                <label for="search">Search Term&nbsp;&nbsp;|&nbsp;&nbsp;search</label>
+                <input name="search" id="search" type="text" class="validate" placeholder="grumpy cat" required>
             </div>
         </div>
         <div class="row">
             <h6 class="form-option-title col s12">How Recent?&nbsp;&nbsp;|&nbsp;&nbsp;dateRestrict</h6>
             <div class="form-dateRestrict input-field col s12">
                 <div class="col s1">
-                    <input name="dateRestrictNum" type="text" placeholder="num" min="1" max="" id="date-restrict-num">
+                    <input name="dateRestrictNum" type="text" placeholder="num" min="1" max="" id="dateRestrictNum">
                 </div>
                 <div class="col s2">
-                    <select name="dateRestrictType">
+                    <select name="dateRestrictType" id="dateRestrictType">
                         <option value="" disabled selected>Period</option>
                         <option value="y">Years</option>
                         <option value="m">Months</option>
@@ -49,50 +49,82 @@
             </div>
         </div>
         <div class="row">
-            <h6 class="form-option-title col s12">Dominant Color&nbsp;&nbsp;|&nbsp;&nbsp;imgDominantColor</h6>
-            <div class="form-imgDominantColor input-field col s12">
-                <input class="form-radio" name="imgDominantColor" value="black" type="radio" id="black">
-                <label class="waves-effect waves-teal btn" for="black">black</label>
+            <h6 class="form-option-title col s12">Image Type&nbsp;&nbsp;|&nbsp;&nbsp;imgType</h6>
+            <div class="form-imgType input-field form-radio-field col s12">
+                <input class="form-radio" name="imgType" value="clipart" type="radio" id="clipart">
+                <label class="waves-effect waves-teal btn" for="clipart">clipart</label>
 
-                <input class="form-radio" name="imgDominantColor" value="white" type="radio" id="white">
-                <label class="waves-effect waves-teal btn" for="white">white</label>
+                <input class="form-radio" name="imgType" value="face" type="radio" id="face">
+                <label class="waves-effect waves-teal btn" for="face">face</label>
+
+                <input class="form-radio" name="imgType" value="lineart" type="radio" id="lineart">
+                <label class="waves-effect waves-teal btn" for="lineart">lineart</label>
+
+                <input class="form-radio" name="imgType" value="news" type="radio" id="news">
+                <label class="waves-effect waves-teal btn" for="news">news</label>
+
+                <input class="form-radio" name="imgType" value="photo" type="radio" id="photo">
+                <label class="waves-effect waves-teal btn" for="photo">photo</label>
+            </div>
+        </div>
+        <div class="row">
+            <h6 class="form-option-title col s12">Dominant Color&nbsp;&nbsp;|&nbsp;&nbsp;imgDominantColor</h6>
+            <div class="form-imgDominantColor form-radio-field input-field col s12">
+                <input class="form-radio" name="imgDominantColor" value="black" type="radio" id="black">
+                <label class="waves-effect btn" for="black">black</label>
 
                 <input class="form-radio" name="imgDominantColor" value="gray" type="radio" id="gray">
-                <label class="waves-effect waves-teal btn" for="gray">gray</label>
+                <label class="waves-effect btn" for="gray">gray</label>
+
+                <input class="form-radio" name="imgDominantColor" value="white" type="radio" id="white">
+                <label class="waves-effect btn" for="white">white</label>
 
                 <input class="form-radio" name="imgDominantColor" value="brown" type="radio" id="brown">
-                <label class="waves-effect waves-teal btn" for="brown">brown</label>
+                <label class="waves-effect btn" for="brown">brown</label>
 
                 <input class="form-radio" name="imgDominantColor" value="blue" type="radio" id="blue">
-                <label class="waves-effect waves-teal btn" for="blue">blue</label>
+                <label class="waves-effect btn" for="blue">blue</label>
 
                 <input class="form-radio" name="imgDominantColor" value="green" type="radio" id="green">
-                <label class="waves-effect waves-teal btn" for="green">green</label>
+                <label class="waves-effect btn" for="green">green</label>
 
                 <input class="form-radio" name="imgDominantColor" value="teal" type="radio" id="teal">
-                <label class="waves-effect waves-teal btn" for="teal">teal</label>
+                <label class="waves-effect btn" for="teal">teal</label>
 
                 <input class="form-radio" name="imgDominantColor" value="yellow" type="radio" id="yellow">
-                <label class="waves-effect waves-teal btn" for="yellow">yellow</label>
+                <label class="waves-effect btn" for="yellow">yellow</label>
 
                 <input class="form-radio" name="imgDominantColor" value="pink" type="radio" id="pink">
-                <label class="waves-effect waves-teal btn" for="pink">pink</label>
+                <label class="waves-effect btn" for="pink">pink</label>
 
                 <input class="form-radio" name="imgDominantColor" value="purple" type="radio" id="purple">
-                <label class="waves-effect waves-teal btn" for="purple">purple</label>
+                <label class="waves-effect btn" for="purple">purple</label>
             </div>
         </div>
         <div class="row">
             <h6 class="form-option-title col s12">Color Type&nbsp;&nbsp;|&nbsp;&nbsp;imgColorType</h6>
-            <div class="form-imageColorType input-field col s12">
+            <div class="form-imageColorType form-radio-field input-field col s12">
                 <input class="form-radio" name="imgColorType" value="color" type="radio" id="color">
                 <label class="waves-effect waves-teal btn" for="color">color</label>
 
-                <input class="form-radio" name="imgColorType" value="gray" type="radio" id="gray">
-                <label class="waves-effect waves-teal btn" for="gray">gray</label>
+                <input class="form-radio" name="imgColorType" value="gray" type="radio" id="gray-type">
+                <label class="waves-effect waves-teal btn" for="gray-type">gray</label>
 
                 <input class="form-radio" name="imgColorType" value="mono" type="radio" id="mono">
                 <label class="waves-effect waves-teal btn" for="mono">mono</label>
+            </div>
+        </div>
+        <div class="row">
+            <h6 class="form-option-title col s12">Safe Search&nbsp;&nbsp;|&nbsp;&nbsp;safe</h6>
+            <div class="form-safe form-radio-field input-field col s12">
+                <input class="form-radio" name="safe" value="off" type="radio" id="off">
+                <label class="waves-effect waves-teal btn" for="off">off</label>
+
+                <input class="form-radio" name="safe" value="medium" type="radio" id="medium">
+                <label class="waves-effect waves-teal btn" for="medium">medium</label>
+
+                <input class="form-radio" name="safe" value="high" type="radio" id="high">
+                <label class="waves-effect waves-teal btn" for="high">high</label>
             </div>
         </div>
     </form>

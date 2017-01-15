@@ -1,17 +1,26 @@
 .form {
-    
+
     .input-field {
         margin-top: 0;
     }
 
+    &-option-title {
+        margin-bottom: 0;
+    }
+
     &-radio-field.col {
         padding-bottom: 2rem;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: baseline;
     }
 
     .btn {
         background-color: #ddd;
         color: #444;
         margin: 3px;
+        padding: 0 10px !important;
 
         &:before,
         &:after {
@@ -27,9 +36,27 @@
     }
 }
 
-.form-image-size {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: baseline;
+
+.form-imgDominantColor {
+
+    .form-radio:checked + .btn {
+        background-color: #ddd;
+    }
+
+    .form-radio:checked + .btn {
+        &[for="black"] {background-color: black;}
+        &[for="gray"] {background-color: gray;}
+        &[for="white"] {
+            background-color: white;
+            color: black;
+            box-shadow: 0 0 4px #bbb;
+        }
+        &[for="brown"] {background-color: brown;}
+        &[for="blue"] {background-color: blue;}
+        &[for="green"] {background-color: green;}
+        &[for="teal"] {background-color: teal;}
+        &[for="yellow"] {background-color: yellow; color: black}
+        &[for="pink"] {background-color: pink; color: black;}
+        &[for="purple"] {background-color: purple;}
+    }
 }

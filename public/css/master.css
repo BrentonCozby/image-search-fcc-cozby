@@ -4,13 +4,21 @@
 .form .input-field {
   margin-top: 0; }
 
+.form-option-title {
+  margin-bottom: 0; }
+
 .form-radio-field.col {
-  padding-bottom: 2rem; }
+  padding-bottom: 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: baseline; }
 
 .form .btn {
   background-color: #ddd;
   color: #444;
-  margin: 3px; }
+  margin: 3px;
+  padding: 0 10px !important; }
   .form .btn:before, .form .btn:after {
     display: none !important; }
 
@@ -20,11 +28,42 @@
   box-shadow: none;
   top: calc(0.8rem + 2px); }
 
-.form-image-size {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: baseline; }
+.form-imgDominantColor .form-radio:checked + .btn {
+  background-color: #ddd; }
+
+.form-imgDominantColor .form-radio:checked + .btn[for="black"] {
+  background-color: black; }
+
+.form-imgDominantColor .form-radio:checked + .btn[for="gray"] {
+  background-color: gray; }
+
+.form-imgDominantColor .form-radio:checked + .btn[for="white"] {
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 4px #bbb; }
+
+.form-imgDominantColor .form-radio:checked + .btn[for="brown"] {
+  background-color: brown; }
+
+.form-imgDominantColor .form-radio:checked + .btn[for="blue"] {
+  background-color: blue; }
+
+.form-imgDominantColor .form-radio:checked + .btn[for="green"] {
+  background-color: green; }
+
+.form-imgDominantColor .form-radio:checked + .btn[for="teal"] {
+  background-color: teal; }
+
+.form-imgDominantColor .form-radio:checked + .btn[for="yellow"] {
+  background-color: yellow;
+  color: black; }
+
+.form-imgDominantColor .form-radio:checked + .btn[for="pink"] {
+  background-color: pink;
+  color: black; }
+
+.form-imgDominantColor .form-radio:checked + .btn[for="purple"] {
+  background-color: purple; }
 
 h3 {
   color: #ee6e73; }

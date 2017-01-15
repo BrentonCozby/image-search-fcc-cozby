@@ -15,9 +15,11 @@
             <a class="btn waves-effect waves-light" target="_blank" rel="noopener" href="https://github.com/BrentonCozby/image-search-fcc-cozby">View the code</a>
         </div>
         <h3>Build a URL</h3>
-        <p class="api-url" id="api-url">http://image-search-fcc-cozby.herokuapp.com/api?search=truck&imgSize=large&imgDominantColor=blue&start=0</p>
-        <a class="btn waves-effect waves-light">get images</a>
-        <a class="btn waves-effect waves-light">reset</a>
+        <p>
+            <a class="api-url" id="api-url" target="_blank" rel="noopener" href="http://image-search-fcc-cozby.herokuapp.com/api?search=truck&imgSize=large&start=0">http://image-search-fcc-cozby.herokuapp.com/api?search=truck&imgSize=large&start=0</a>
+        </p>
+        <a class="btn waves-effect waves-light" id="get-images">get images</a>
+        <a class="btn waves-effect waves-light" id="reset">reset</a>
         <div class="row images-container" id="images-container"></div>
         <br>
         <% include ../partials/form.ejs %>
