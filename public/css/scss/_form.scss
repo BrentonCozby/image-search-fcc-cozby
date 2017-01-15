@@ -1,0 +1,35 @@
+.form {
+    
+    .input-field {
+        margin-top: 0;
+    }
+
+    &-radio-field.col {
+        padding-bottom: 2rem;
+    }
+
+    .btn {
+        background-color: #ddd;
+        color: #444;
+        margin: 3px;
+
+        &:before,
+        &:after {
+            display: none !important;
+        }
+    }
+
+    &-radio:checked + .btn {
+        background-color: #26a69a;
+        color: #fff;
+        box-shadow: none;
+        top: calc(0.8rem + 2px);
+    }
+}
+
+.form-image-size {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+}

@@ -2,29 +2,32 @@
 <html lang="en">
 
 <head>
-    <% include ../partials/header.ejs %>
+    <% include ../partials/head.ejs %>
 </head>
 
 <body>
 
-    <h1>Image Search Abstraction Layer</h1>
-    <p>A Free Code Camp project. Created by <a target="blank" rel="noopener" href="https://brentoncozby.com">Brenton Cozby</a>. <a target="_blank" rel="noopener" href="https://github.com/BrentonCozby/image-search-fcc-cozby"><button>View the code</button></a></p>
-    <br>
-    <hr>
-    <h2>Example usage:</h2>
-    <p>http://image-search-fcc-cozby.herokuapp.com/api?search=truck&imgSize=large&imgDominantColor=blue&start=0</p>
-    <br>
-    <a href="api/history"><h4 style="display: inline">See Search History</h4></a>
-    <br>
-    <br>
-    <hr>
-    <h2>URL options:</h2>
+    <% include ../partials/navbar %>
 
-    <% include ../partials/options.ejs %>
+    <div class="container">
+        <div class="summary">
+            <p>A Basejump project from <a target="_blank" rel="noopener" href="https://www.freecodecamp.com/challenges/image-search-abstraction-layer">Free Code Camp</a>. Created by <a target="blank" rel="noopener" href="https://brentoncozby.com">Brenton Cozby</a>.</p>
+            <a class="btn waves-effect waves-light" target="_blank" rel="noopener" href="https://github.com/BrentonCozby/image-search-fcc-cozby">View the code</a>
+        </div>
+        <h3>Build a URL</h3>
+        <p class="api-url" id="api-url">http://image-search-fcc-cozby.herokuapp.com/api?search=truck&imgSize=large&imgDominantColor=blue&start=0</p>
+        <a class="btn waves-effect waves-light">get images</a>
+        <a class="btn waves-effect waves-light">reset</a>
+        <div class="row images-container" id="images-container"></div>
+        <br>
+        <% include ../partials/form.ejs %>
+    </div>
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-    <script src="./js/main.js"></script>
+    <% include ../partials/footer.ejs %>
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+        <script src="./js/bundle.js"></script>
 </body>
 
 </html>

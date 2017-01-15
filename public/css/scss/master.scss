@@ -1,0 +1,15 @@
+@import "_navbar";
+@import "_form";
+
+h3 {
+    color: #ee6e73;
+}
+
+.summary {
+    text-align: center;
+    padding: 30px 0;
+
+    .btn {
+        margin: 5px;
+    }
+}

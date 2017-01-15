@@ -1,21 +1,36 @@
-body {
-    padding: 20px;
-    max-width: 1200px;
-    margin: auto;
-}
+.brand-logo {
+  margin-left: 10px; }
 
-h1 {
-    margin-top: 10px;
-}
+.form .input-field {
+  margin-top: 0; }
 
-h4 {
-    margin: 30px 0 5px 0;
-}
+.form-radio-field.col {
+  padding-bottom: 2rem; }
 
-ul {
-    margin-top: 5px;
-}
+.form .btn {
+  background-color: #ddd;
+  color: #444;
+  margin: 3px; }
+  .form .btn:before, .form .btn:after {
+    display: none !important; }
 
-a {
-    color: #07c;
-}
+.form-radio:checked + .btn {
+  background-color: #26a69a;
+  color: #fff;
+  box-shadow: none;
+  top: calc(0.8rem + 2px); }
+
+.form-image-size {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: baseline; }
+
+h3 {
+  color: #ee6e73; }
+
+.summary {
+  text-align: center;
+  padding: 30px 0; }
+  .summary .btn {
+    margin: 5px; }
