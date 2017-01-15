@@ -1,0 +1,6 @@
+{
+  "name": "image-search-fcc-cozby",
+  "description": "Image search abstraction layer. A Free Code Camp project.",
+  "repository": "https://github.com/BrentonCozby/image-search-fcc-cozby",
+  "keywords": ["node", "express", "static", "freeCodeCamp"]
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/header.ejs %>
+    <style>
+        body {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        h1 {margin-top: 10px;}
+        h4 {margin: 30px 0 5px 0;}
+        ul {margin-top: 5px;}
+        a {color: #07c;}
+    </style>
+</head>
+
+<body>
+
+    <h1>Image Search Abstraction Layer</h1>
+    <p>A Free Code Camp project. Created by <a target="blank" rel="noopener" href="https://brentoncozby.com">Brenton Cozby</a>. <a target="_blank" rel="noopener" href="https://github.com/BrentonCozby/image-search-fcc-cozby"><button>View the code</button></a></p>
+    <br>
+    <hr>
+    <h2>Example usage:</h2>
+    <p>http://image-search-fcc-cozby.herokuapp.com/api?search=truck&imgSize=large&imgDominantColor=blue&start=0</p>
+    <br>
+    <a href="api/history"><h4 style="display: inline">See Search History</h4></a>
+    <br>
+    <br>
+    <hr>
+    <h2>URL options:</h2>
+
+    <% include ../partials/options.ejs %>
+
+</body>
+
+</html>
