@@ -50,9 +50,7 @@ const formMethods = {
     getImages: function() {
         $.get($apiUrl.html())
             .done(data => {
-                data.forEach(image => {
-                    console.log(image.link);
-                });
+                console.log(data);
             })
             .fail(err => {
                 console.log(err);

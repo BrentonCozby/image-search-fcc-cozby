@@ -4,8 +4,7 @@ const history = require('../models/db');
 module.exports = function(app) {
     app.get('/api', (req, res) => {
         search(req.query, (err, data) => {
-            if(err) res.end(err);
-            res.header("Access-Control-Allow-Origin", "*");
+            if (err) res.end(err);
 
             var images = data.items.map(item => {
                 return {
