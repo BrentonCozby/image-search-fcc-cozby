@@ -48,7 +48,15 @@ const formMethods = {
         $apiUrl.html('http://image-search-fcc-cozby.herokuapp.com/api?search=grumpycat&start=0');
     },
     getImages: function() {
-
+        $.get($apiUrl.html())
+            .done(data => {
+                data.forEach(image => {
+                    console.log(image.link);
+                });
+            })
+            .fail(err => {
+                console.log(err);
+            });
     }
 };
 
