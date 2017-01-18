@@ -6,16 +6,12 @@ module.exports = function(app) {
 
         var query = {};
 
-        for(var key in req.query) {
-            (function() {
-                if(req.query.hasOwnProperty(key)) {
-                    var val = req.query[key];
-                    (function() {
-                        key = key.replace('amp;', '');
-                        query[key] = val;
-                    })(val);
-                }
-            })(key);
+        for (let key in req.query) {
+            if (req.query.hasOwnProperty(key)) {
+                let val = req.query[key];
+                key = key.replace('amp;', '');
+                query[key] = val;
+            }
         }
 
         search(query, function(err, data) {

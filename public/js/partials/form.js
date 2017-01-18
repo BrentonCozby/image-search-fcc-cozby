@@ -35,6 +35,8 @@ const formMethods = {
     $imagesModal: null,
     $modalHeader: null,
     init: function() {
+        $apiUrl.html(window.location.origin + '/api?search=grumpycat&start=1');
+        $apiUrl.attr('href', window.location.origin + '/api?search=grumpycat&start=1');
         $('select').material_select();
         $('.modal').modal();
         formMethods.$imagesModal = $('#images-modal');
