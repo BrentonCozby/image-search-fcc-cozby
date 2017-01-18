@@ -2,19 +2,24 @@ const search = require('../search');
 const history = require('../models/db');
 
 module.exports = function(app) {
-    app.get('/api', (req, res) => {
+    app.get('/api', function(req, res) {
 
         var query = {};
-        for(let key in req.query) {
-            if(req.query.hasOwnProperty(key)) {
-                let val = req.query[key];
-                key = key.replace('amp;', '');
-                query[key] = val;
-            }
+
+        for(var key in req.query) {
+            (function() {
+                if(req.query.hasOwnProperty(key)) {
+                    var val = req.query[key];
+                    (function() {
+                        key = key.replace('amp;', '');
+                        query[key] = val;
+                    })(val);
+                }
+            })(key);
         }
 
-        search(query, (err, data) => {
-            var images = data.items.map(item => {
+        search(query, function(err, data) {
+            var images = data.items.map(function(item) {
                 return {
                     snippet: item.snippet,
                     link: item.link,

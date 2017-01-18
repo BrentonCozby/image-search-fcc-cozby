@@ -36,7 +36,7 @@ app.use(function(req, res, next) {
     require('./api/routes/index.js'),
     require('./api/routes/api.js'),
     require('./api/routes/history.js')
-].forEach(route => {
+].forEach(function(route) {
     route(app);
 });
 
