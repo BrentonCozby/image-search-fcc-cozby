@@ -32,16 +32,12 @@ app.use(function(req, res, next) {
 });
 
 // set routes
-// [
-//     require('./api/routes/index.js'),
-//     require('./api/routes/api.js'),
-//     require('./api/routes/history.js')
-// ].forEach(route => {
-//     route(app);
-// });
-
-app.use('/', (req, res) => {
-    res.send('TEST');
+[
+    require('./api/routes/index.js'),
+    require('./api/routes/api.js'),
+    require('./api/routes/history.js')
+].forEach(route => {
+    route(app);
 });
 
 app.listen(app.get('port'), function() {
