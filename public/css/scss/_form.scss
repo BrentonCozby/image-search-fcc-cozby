@@ -2,6 +2,7 @@
 
     .input-field {
         margin-top: 0;
+        padding-bottom: 1rem;
     }
 
     &-option-title {
@@ -9,7 +10,7 @@
     }
 
     &-radio-field.col {
-        padding-bottom: 2rem;
+        padding-bottom: 3rem;
         display: flex;
         flex-flow: row wrap;
         justify-content: flex-start;
@@ -51,12 +52,12 @@
             color: black;
             box-shadow: 0 0 4px #bbb;
         }
-        &[for="brown"] {background-color: brown;}
-        &[for="blue"] {background-color: blue;}
-        &[for="green"] {background-color: green;}
-        &[for="teal"] {background-color: teal;}
-        &[for="yellow"] {background-color: yellow; color: black}
-        &[for="pink"] {background-color: pink; color: black;}
-        &[for="purple"] {background-color: purple;}
+        &[for="brown"] {background-color: #6d4c41;}
+        &[for="blue"] {background-color: #1976d2;}
+        &[for="green"] {background-color: #43a047;}
+        &[for="teal"] {background-color: #009688;}
+        &[for="yellow"] {background-color: #ffee58; color: black}
+        &[for="pink"] {background-color: #f48fb1; color: black;}
+        &[for="purple"] {background-color: #ab47bc;}
     }
 }

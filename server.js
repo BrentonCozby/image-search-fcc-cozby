@@ -15,12 +15,10 @@ app.use(function(req, res, next) {
 
     // Website you wish to allow to connect
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
-
-    // Website you wish to allow to connect
     res.setHeader('Access-Control-Allow-Origin', 'http://image-search-fcc-cozby.herokuapp.com/api');
 
     // Request methods you wish to allow
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Methods', 'GET');
 
     // Request headers you wish to allow
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
@@ -35,9 +33,9 @@ app.use(function(req, res, next) {
 
 // set routes
 [
-    require('./app/routes/index.js'),
-    require('./app/routes/api.js'),
-    require('./app/routes/history.js')
+    require('./api/routes/index.js'),
+    require('./api/routes/api.js'),
+    require('./api/routes/history.js')
 ].forEach(route => {
     route(app);
 });

@@ -2,13 +2,14 @@
   margin-left: 10px; }
 
 .form .input-field {
-  margin-top: 0; }
+  margin-top: 0;
+  padding-bottom: 1rem; }
 
 .form-option-title {
   margin-bottom: 0; }
 
 .form-radio-field.col {
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -43,27 +44,27 @@
   box-shadow: 0 0 4px #bbb; }
 
 .form-imgDominantColor .form-radio:checked + .btn[for="brown"] {
-  background-color: brown; }
+  background-color: #6d4c41; }
 
 .form-imgDominantColor .form-radio:checked + .btn[for="blue"] {
-  background-color: blue; }
+  background-color: #1976d2; }
 
 .form-imgDominantColor .form-radio:checked + .btn[for="green"] {
-  background-color: green; }
+  background-color: #43a047; }
 
 .form-imgDominantColor .form-radio:checked + .btn[for="teal"] {
-  background-color: teal; }
+  background-color: #009688; }
 
 .form-imgDominantColor .form-radio:checked + .btn[for="yellow"] {
-  background-color: yellow;
+  background-color: #ffee58;
   color: black; }
 
 .form-imgDominantColor .form-radio:checked + .btn[for="pink"] {
-  background-color: pink;
+  background-color: #f48fb1;
   color: black; }
 
 .form-imgDominantColor .form-radio:checked + .btn[for="purple"] {
-  background-color: purple; }
+  background-color: #ab47bc; }
 
 h3 {
   color: #ee6e73; }
@@ -73,3 +74,18 @@ h3 {
   padding: 30px 0; }
   .summary .btn {
     margin: 5px; }
+
+.url-container {
+  margin: 25px 0; }
+
+.get-images {
+  margin-right: 10px; }
+
+.reset {
+  background-color: #ddd;
+  color: #666; }
+
+footer.page-footer {
+  padding-top: 0; }
+  footer.page-footer a {
+    color: #18ffff; }
