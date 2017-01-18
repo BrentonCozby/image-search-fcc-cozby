@@ -25,7 +25,9 @@ const history = {
             var data = Object.assign(query);
             data.timestamp = Date.now();
 
-            collection.insertOne(data, db.close);
+            collection.insertOne(data, () => {
+                db.close()
+            });
         });
     }
 };

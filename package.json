@@ -15,7 +15,7 @@
         "sass": "node-sass ./public/css/scss/master.scss -o public/css/",
         "autoprefixer": "postcss --use autoprefixer -o ./public/css/master.css ./public/css/master.css",
         "build-css": "npm run sass && npm run autoprefixer",
-        "watch-css": "node-sass --watch --recursive ./public/css/scss/master.scss -o ./public/css/",
+        "watch-css": "node-sass --watch --recursive ./public/css/scss/ -o ./public/css/",
         "cleancss": "cleancss -o ./public/css/main.min.css ./public/css/master.scss ",
         "build-css-min": "npm run sass && npm run autoprefixer && npm run cleancss",
         "build-all": "npm run build-js & npm run build-css",

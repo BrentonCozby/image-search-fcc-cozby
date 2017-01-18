@@ -17,6 +17,20 @@ const optionSelectors = [
     ['input[name=safe]:checked', 'safe']
 ];
 
+function createImage(thumbnailLink, link, snippet) {
+    var anchor = document.createElement('a');
+    anchor.setAttribute('href', link);
+    anchor.setAttribute('target', '_blank');
+    anchor.setAttribute('rel', 'noopener');
+    var img = document.createElement('img');
+    img.setAttribute('src', thumbnailLink);
+    img.setAttribute('alt', snippet);
+    img.setAttribute('title', snippet);
+    img.className += 'image';
+    anchor.appendChild(img);
+    return anchor;
+}
+
 const formMethods = {
     $imagesModal: null,
     $modalHeader: null,
@@ -30,7 +44,7 @@ const formMethods = {
         $('#get-images').click(formMethods.getImages);
     },
     buildUrl: function() {
-        var urlHTML = '/api?';
+        var urlHTML = window.location.origin + '/api?';
         const drNum = $('#dateRestrictNum').val();
         const drType = $('#dateRestrictType').val();
         optionSelectors.forEach(selector => {
@@ -43,38 +57,28 @@ const formMethods = {
         if(drNum && drType) {
             urlHTML += `dateRestrict=${drType}[${drNum}]&`;
         }
-        $apiUrl.html(urlHTML + 'start=0');
-        $apiUrl.attr('href', urlHTML + 'start=0');
+        $apiUrl.html(urlHTML + 'start=1');
+        $apiUrl.attr('href', urlHTML + 'start=1');
     },
     resetForm: function() {
         $('#search').val('');
         $('#dateRestrictNum').val('');
         $('input').attr('checked', false);
-        $apiUrl.html('/api?search=grumpycat&start=0');
+        $apiUrl.html(window.location.origin + '/api?search=grumpycat&start=1');
     },
     getImages: function() {
-        function createImage(thumbnailLink, link, snippet) {
-            var img = document.createElement('img');
-            img.setAttribute('src', thumbnailLink);
-            img.setAttribute('alt', snippet);
-            img.setAttribute('title', snippet);
-            img.dataset.link = link;
-            img.className += 'image z-depth-4';
-            return img;
-        }
+        $('#images-container').empty();
         formMethods.$imagesModal.modal('open');
         formMethods.$modalHeader.html( $('#search').val() === '' ? 'Grumpy Cat' : $('#search').val() );
-        $.get($apiUrl.html())
+        $.get($('#api-url').html())
         .done(data => {
+            data = JSON.parse(data);
             console.log(data);
             var imagesArray = [];
-            data.toArray(imagesData => {
-                const $imagesContainer = $('#images-container');
-                imagesData.forEach(image => {
-                    imagesArray.push(createImage(image.thumbnailLink, image.link, image.snippet));
-                });
-                $imagesContainer.append(imagesArray);
+            data.forEach(image => {
+                imagesArray.push(createImage(image.thumbnail, image.link, image.snippet));
             });
+            $('#images-container').append(imagesArray);
         })
         .fail(err => {
             console.log(err);

@@ -66,6 +66,20 @@
 .form-imgDominantColor .form-radio:checked + .btn[for="purple"] {
   background-color: #ab47bc; }
 
+.images-container {
+  column-count: 3;
+  column-gap: 1em; }
+  .images-container .image {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 10px;
+    border: 3px solid #eee;
+    border-radius: 3px;
+    box-shadow: 0 1px 5px 0 #555;
+    transition: all .2s; }
+    .images-container .image:hover, .images-container .image:focus {
+      box-shadow: 0 3px 10px 1px #333; }
+
 h3 {
   color: #ee6e73; }
 

@@ -3,9 +3,17 @@ const history = require('../models/db');
 
 module.exports = function(app) {
     app.get('/api', (req, res) => {
-        search(req.query, (err, data) => {
-            if (err) res.end(err);
 
+        var query = {};
+        for(let key in req.query) {
+            if(req.query.hasOwnProperty(key)) {
+                let val = req.query[key];
+                key = key.replace('amp;', '');
+                query[key] = val;
+            }
+        }
+
+        search(query, (err, data) => {
             var images = data.items.map(item => {
                 return {
                     snippet: item.snippet,
@@ -18,8 +26,8 @@ module.exports = function(app) {
                 };
             });
 
-            delete req.query.start;
-            history.push(req.query);
+            delete query.start;
+            history.push(query);
 
             res.end(JSON.stringify(images, null, 2));
         });

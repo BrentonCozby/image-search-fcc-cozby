@@ -10,14 +10,14 @@ function search(query, callback) {
     // https://developers.google.com/custom-search/json-api/v1/reference/cse/list#request
     var options = {
         cx: CX,
-        auth: API_KEY,
+        key: API_KEY,
         q: query.search,
         num: 10,
         alt: "json",
         searchType: "image"
     };
 
-    if (query.start) options.start = query.start;
+    if (query.start) options.start = +query.start;
     if (query.imgSize) options.imgSize = query.imgSize;
     if (query.imgType) options.imgType = query.imgType;
     if (query.imgColorType) options.imgColorType = query.imgColorType;
