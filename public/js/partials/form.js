@@ -53,7 +53,7 @@ const formMethods = {
         $apiUrl.html('/api?search=grumpycat&start=0');
     },
     getImages: function() {
-        function Image(thumbnailLink, link, snippet) {
+        function createImage(thumbnailLink, link, snippet) {
             var img = document.createElement('img');
             img.setAttribute('src', thumbnailLink);
             img.setAttribute('alt', snippet);
@@ -65,18 +65,20 @@ const formMethods = {
         formMethods.$imagesModal.modal('open');
         formMethods.$modalHeader.html( $('#search').val() === '' ? 'Grumpy Cat' : $('#search').val() );
         $.get($apiUrl.html())
-            .done(data => {
-                console.log(data);
-                // data.toArray(imagesData => {
-                //     const $imagesContainer = $('#images-container');
-                //     imagesData.forEach(image => {
-                //         $imagesContainer.append(new Image(image.thumbnailLink, image.link, image.snippet));
-                //     });
-                // });
-            })
-            .fail(err => {
-                console.log(err);
+        .done(data => {
+            console.log(data);
+            var imagesArray = [];
+            data.toArray(imagesData => {
+                const $imagesContainer = $('#images-container');
+                imagesData.forEach(image => {
+                    imagesArray.push(createImage(image.thumbnailLink, image.link, image.snippet));
+                });
+                $imagesContainer.append(imagesArray);
             });
+        })
+        .fail(err => {
+            console.log(err);
+        });
     }
 };
 
