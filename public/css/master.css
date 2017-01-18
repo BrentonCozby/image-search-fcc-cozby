@@ -69,6 +69,9 @@
 .images-container {
   column-count: 3;
   column-gap: 1em; }
+  @media all and (min-width: 480px) {
+    .images-container {
+      column-count: 4; } }
   .images-container .image {
     box-sizing: border-box;
     width: 100%;
