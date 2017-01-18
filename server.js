@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-app.set('port', (process.env.PORT || 3000));
+app.set('port', (process.env.PORT || 5000));
 
 app.set('views', path.join(__dirname, 'views', 'pages'));
 app.set('view engine', 'ejs');
@@ -32,12 +32,16 @@ app.use(function(req, res, next) {
 });
 
 // set routes
-[
-    require('./api/routes/index.js'),
-    require('./api/routes/api.js'),
-    require('./api/routes/history.js')
-].forEach(route => {
-    route(app);
+// [
+//     require('./api/routes/index.js'),
+//     require('./api/routes/api.js'),
+//     require('./api/routes/history.js')
+// ].forEach(route => {
+//     route(app);
+// });
+
+app.use('/', (req, res) => {
+    res.send('TEST');
 });
 
 app.listen(app.get('port'), function() {
