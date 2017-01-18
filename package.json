@@ -32,9 +32,6 @@
         "freeCodeCamp"
     ],
     "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/BrentonCozby/image-search-fcc-cozby/issues"
-    },
     "homepage": "https://github.com/BrentonCozby/image-search-fcc-cozby#readme",
     "author": "Brenton Cozby -- brenton.cozby@gmail.com",
     "dependencies": {
