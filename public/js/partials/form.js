@@ -41,7 +41,7 @@ const formMethods = {
         $('.modal').modal();
         formMethods.$imagesModal = $('#images-modal');
         formMethods.$modalHeader = $('#modal-header');
-        $options.on('change', formMethods.buildUrl);
+        $options.on('input', formMethods.buildUrl);
         $('#reset').click(formMethods.resetForm);
         $('#get-images').click(formMethods.getImages);
     },
