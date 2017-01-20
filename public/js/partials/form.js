@@ -41,6 +41,11 @@ const formMethods = {
         formMethods.$imagesModal = $('#images-modal');
         formMethods.$modalHeader = $('#modal-header');
         $('#search').on('input', formMethods.buildUrl);
+        $('#search').on('keypress', e => {
+            if(e.keyCode === 13) {
+                formMethods.getImages();
+            }
+        });
         $options.on('change', formMethods.buildUrl);
         $('#reset').click(formMethods.resetForm);
         $('#get-images').click(formMethods.getImages);

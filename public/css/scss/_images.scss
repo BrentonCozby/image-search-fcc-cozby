@@ -1,14 +1,15 @@
 .images-container {
-    column-count: 3;
+    column-count: 2;
     @media all and (min-width: 480px) {
         column-count: 4;
     }
     column-gap: 1em;
+    padding-bottom: 20px;
 
     .image {
         box-sizing: border-box;
         width: 100%;
-        margin: 10px;
+        margin: 5px 5px 5px 0;
         border: 3px solid #eee;
         border-radius: 3px;
         box-shadow: 0 1px 5px 0 #555;
