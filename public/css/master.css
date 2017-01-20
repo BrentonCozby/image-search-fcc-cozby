@@ -10,10 +10,17 @@
 
 .form-radio-field.col {
   padding-bottom: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: baseline; }
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline; }
 
 .form .btn {
   background-color: #ddd;
@@ -67,11 +74,17 @@
   background-color: #ab47bc; }
 
 .images-container {
-  column-count: 3;
-  column-gap: 1em; }
+  -webkit-column-count: 3;
+     -moz-column-count: 3;
+          column-count: 3;
+  -webkit-column-gap: 1em;
+     -moz-column-gap: 1em;
+          column-gap: 1em; }
   @media all and (min-width: 480px) {
     .images-container {
-      column-count: 4; } }
+      -webkit-column-count: 4;
+         -moz-column-count: 4;
+              column-count: 4; } }
   .images-container .image {
     box-sizing: border-box;
     width: 100%;
@@ -79,6 +92,7 @@
     border: 3px solid #eee;
     border-radius: 3px;
     box-shadow: 0 1px 5px 0 #555;
+    -webkit-transition: all .2s;
     transition: all .2s; }
     .images-container .image:hover, .images-container .image:focus {
       box-shadow: 0 3px 10px 1px #333; }

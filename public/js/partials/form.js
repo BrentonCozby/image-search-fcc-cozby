@@ -63,7 +63,6 @@ const formMethods = {
         $apiUrl.attr('href', urlHTML + 'start=1');
     },
     resetForm: function() {
-        $('#search').val('');
         $('#dateRestrictNum').val('');
         $('input').attr('checked', false);
         $apiUrl.html(window.location.origin + '/api?search=grumpycat&start=1');
