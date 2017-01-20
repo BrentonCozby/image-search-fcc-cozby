@@ -1,6 +1,5 @@
 const $apiUrl = $('#api-url');
-const $options = $('#search')
-    .add('#dateRestrictNum')
+const $options = $('#dateRestrictNum')
     .add('#dateRestrictType')
     .add('input[name=imgSize]')
     .add('input[name=imgType]')
@@ -41,7 +40,8 @@ const formMethods = {
         $('.modal').modal();
         formMethods.$imagesModal = $('#images-modal');
         formMethods.$modalHeader = $('#modal-header');
-        $options.on('input', formMethods.buildUrl);
+        $('#search').on('input', formMethods.buildUrl);
+        $options.on('change', formMethods.buildUrl);
         $('#reset').click(formMethods.resetForm);
         $('#get-images').click(formMethods.getImages);
     },
