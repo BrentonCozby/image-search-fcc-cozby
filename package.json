@@ -18,7 +18,7 @@
         "autoprefixer": "postcss --use autoprefixer -o ./public/css/master.css ./public/css/master.css",
         "build-css": "npm run sass && npm run autoprefixer",
         "watch-css": "node-sass --watch --recursive ./public/css/scss/ -o ./public/css/",
-        "cleancss": "cleancss -o ./public/css/main.css ./public/css/master.scss ",
+        "cleancss": "cleancss -o ./public/css/master.css ./public/css/scss/master.scss ",
         "build-css-min": "npm run sass && npm run autoprefixer && npm run cleancss",
         "prod": "npm run build-js-min && npm run build-css-min"
     },
@@ -36,12 +36,14 @@
     "homepage": "https://github.com/BrentonCozby/image-search-fcc-cozby#readme",
     "author": "Brenton Cozby -- brenton.cozby@gmail.com",
     "dependencies": {
+        "clean-css": "^3.4.24",
         "dotenv": "^4.0.0",
         "ejs": "^2.5.5",
         "express": "^4.14.0",
         "googleapis": "^16.1.0",
         "mongodb": "^2.2.21",
-        "morgan": "^1.7.0"
+        "morgan": "^1.7.0",
+        "uglify-js": "^2.7.5"
     },
     "devDependencies": {
         "autoprefixer": "^6.6.1",
