@@ -34,8 +34,8 @@ const formMethods = {
     $imagesModal: null,
     $modalHeader: null,
     init: function() {
-        $apiUrl.html(window.location.origin + '/api?search=grumpycat&start=1');
-        $apiUrl.attr('href', window.location.origin + '/api?search=grumpycat&start=1');
+        $apiUrl.html(window.location.origin + '/projects/FreeCodeCamp/image-search-fcc-cozby/api?search=grumpycat&start=1');
+        $apiUrl.attr('href', window.location.origin + '/projects/FreeCodeCamp/image-search-fcc-cozby/api?search=grumpycat&start=1');
         $('select').material_select();
         $('.modal').modal();
         formMethods.$imagesModal = $('#images-modal');
@@ -51,7 +51,7 @@ const formMethods = {
         $('#get-images').click(formMethods.getImages);
     },
     buildUrl: function() {
-        var urlHTML = window.location.origin + '/api?';
+        var urlHTML = window.location.origin + '/projects/FreeCodeCamp/image-search-fcc-cozby/api?';
         const drNum = $('#dateRestrictNum').val();
         const drType = $('#dateRestrictType').val();
         optionSelectors.forEach(selector => {
@@ -70,7 +70,7 @@ const formMethods = {
     resetForm: function() {
         $('#dateRestrictNum').val('');
         $('input').attr('checked', false);
-        $apiUrl.html(window.location.origin + '/api?search=grumpycat&start=1');
+        $apiUrl.html(window.location.origin + '/projects/FreeCodeCamp/image-search-fcc-cozby/api?search=grumpycat&start=1');
     },
     getImages: function() {
         $('#images-container').empty();
