@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-app.set('port', (process.env.PORT || 3003));
+app.set('port', (process.env.PORT || 4005));
 
 app.set('views', path.join(__dirname, 'views', 'pages'));
 app.set('view engine', 'ejs');
@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(function(req, res, next) {
 
     // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3003');
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4005');
     res.setHeader('Access-Control-Allow-Origin', 'http://image-search-fcc-cozby.herokuapp.com/api');
     res.setHeader('Access-Control-Allow-Origin', 'http://brentoncozby.com/projects/FreeCodeCamp/api');
 
