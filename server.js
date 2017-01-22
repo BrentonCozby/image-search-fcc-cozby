@@ -1,9 +1,12 @@
 require('dotenv').config();
 const express = require('express');
 const path = require('path');
+const morgan = require('morgan');
 const app = express();
 
 app.set('port', (process.env.PORT || 4005));
+
+app.use(morgan('dev'));
 
 app.set('views', path.join(__dirname, 'views', 'pages'));
 app.set('view engine', 'ejs');
