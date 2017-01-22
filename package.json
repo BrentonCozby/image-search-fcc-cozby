@@ -1,6 +1,6 @@
 {
     "name": "image-search-fcc-cozby",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": "Image search abstraction layer. A Free Code Camp project.",
     "engines": {
         "node": "6.9.4"
@@ -13,15 +13,14 @@
         "watch": "yarn run watch-js & yarn run watch-css",
         "build-js": "browserify --debug ./public/js/main.js -o ./public/js/bundle.js",
         "watch-js": "watchify --debug ./public/js/main.js -o ./public/js/bundle.js --poll=500 -v",
-        "build-js-min": "browserify ./public/js/main.js | uglifyjs -o ./public/js/bundle.min.js",
+        "build-js-min": "browserify ./public/js/main.js | uglifyjs -o ./public/js/bundle.js",
         "sass": "node-sass ./public/css/scss/master.scss -o public/css/",
         "autoprefixer": "postcss --use autoprefixer -o ./public/css/master.css ./public/css/master.css",
         "build-css": "npm run sass && npm run autoprefixer",
         "watch-css": "node-sass --watch --recursive ./public/css/scss/ -o ./public/css/",
-        "cleancss": "cleancss -o ./public/css/main.min.css ./public/css/master.scss ",
+        "cleancss": "cleancss -o ./public/css/main.css ./public/css/master.scss ",
         "build-css-min": "npm run sass && npm run autoprefixer && npm run cleancss",
-        "build-all": "npm run build-js & npm run build-css",
-        "build-all-min": "npm run build-js-min & npm run build-css-min"
+        "prod": "npm run build-js-min && npm run build-css-min"
     },
     "repository": {
         "type": "git",
