@@ -5,6 +5,9 @@ const morgan = require('morgan');
 const app = express();
 require('dotenv').config()
 
+const PORT = process.env.PORT || 3000
+const rootUrl = `/free-code-camp/image-search`
+
 app.set('port', (process.env.PORT || 3000));
 
 app.use(morgan('dev'));
@@ -19,9 +22,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(function(req, res, next) {
 
     // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4005');
+    res.setHeader('Access-Control-Allow-Origin', `http://localhost:${PORT}`);
     res.setHeader('Access-Control-Allow-Origin', 'http://image-search-fcc-cozby.herokuapp.com/api');
-    res.setHeader('Access-Control-Allow-Origin', 'http://brentoncozby.com/projects/FreeCodeCamp/api');
+    res.setHeader('Access-Control-Allow-Origin', `http://brentoncozby.com/${rootUrl}/api`);
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET');
