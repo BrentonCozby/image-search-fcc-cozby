@@ -1,7 +1,7 @@
 const escape = require('escape-html')
 
 const $apiUrl = $('#api-url')
-const rootUrl = `/free-code-camp/image-search`
+const rootUrl = ``
 
 const $options = $('#dateRestrictNum')
     .add('#dateRestrictType')
@@ -61,7 +61,8 @@ const formMethods = {
         optionSelectors.forEach(selector => {
             var value = escape( $(selector[0]).val() )
             var param = selector[1]
-            if(value) {
+
+            if(value && value !== 'undefined') {
                 urlHTML += `${param}=${value}&`
             }
         })
