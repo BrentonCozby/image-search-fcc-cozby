@@ -52,7 +52,7 @@
     "babelify": "^7.3.0",
     "browserify": "^13.3.0",
     "envify": "^4.0.0",
-    "node-sass": "^4.5.2",
+    "node-sass": "^7.0.0",
     "nodemon": "^1.11.0",
     "postcss-cli": "^2.6.0",
     "uglify": "^0.1.5",
