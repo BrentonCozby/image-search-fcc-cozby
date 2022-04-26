@@ -38,7 +38,7 @@
   "dependencies": {
     "clean-css": "^4.1.11",
     "dotenv": "^4.0.0",
-    "ejs": "^3.1.6",
+    "ejs": "^3.1.7",
     "escape-html": "^1.0.3",
     "express": "^4.15.3",
     "googleapis": "^16.1.0",
