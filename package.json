@@ -20,7 +20,9 @@
     "watch-css": "node-sass --watch --recursive ./public/css/scss/ -o ./public/css/",
     "cleancss": "cleancss -o ./public/css/master.css ./public/css/master.css ",
     "build-css-min": "npm run sass && npm run autoprefixer && npm run cleancss",
-    "prod": "npm run build-js-min && npm run build-css-min"
+    "prod": "npm run build-js-min && npm run build-css-min",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -38,13 +40,14 @@
   "dependencies": {
     "clean-css": "^4.1.11",
     "dotenv": "^4.0.0",
-    "ejs": "^3.1.6",
+    "ejs": "^3.1.7",
     "escape-html": "^1.0.3",
     "express": "^4.15.3",
-    "googleapis": "^16.1.0",
-    "mongodb": "^2.2.21",
-    "morgan": "^1.7.0",
-    "uglify-js": "^2.7.5"
+    "googleapis": "^49.0.0",
+    "mongodb": "^3.1.13",
+    "morgan": "^1.9.1",
+    "uglify-js": "^3.14.3",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "autoprefixer": "^6.6.1",
@@ -70,5 +73,6 @@
       ],
       "envify"
     ]
-  }
+  },
+  "snyk": true
 }
