@@ -41,8 +41,8 @@
     "ejs": "^3.1.6",
     "escape-html": "^1.0.3",
     "express": "^4.15.3",
-    "googleapis": "^16.1.0",
-    "mongodb": "^2.2.21",
+    "googleapis": "^49.0.0",
+    "mongodb": "^3.3.0",
     "morgan": "^1.7.0",
     "uglify-js": "^2.7.5"
   },
